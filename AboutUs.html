@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="abs.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  
+
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <script>
+    window.ga = window.ga || function() {
+      (ga.q = ga.q || []).push(arguments)
+    };
+    ga.l = +new Date;
+    ga('create', 'UA-105392568-1', 'auto'); 
+    ga('send', 'pageview');
+  </script>
+
+</head>
+
+<body >
+  <header>
+		<a href="#" class="logo"><span>UI Tech</span></a>
+
+		<ul class="navbar">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Blog.html">Blogs</a></li>
+			<li><a href="#">Templates</a></li>
+			<li><a href="AboutUs.html">About</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+
+		<div class="main">
+			<a href="login.html" class="user "><i class="ri-user-fill"></i>Sign In</a>
+			<a href="register.html">Register</a>
+			<div class="bx bx-menu" id="menu-icon"></div>
+		</div>
+	</header>
+    
+ 
+    
+    <section>
+      <img src="stars.png" alt="star" id="stars">
+      <img src="moon.png" alt="star" id="moon">
+      <img src="mountains_behind.png" alt="star" id="mountb">
+      <h2 id="text">UI TECH</h2>
+      
+      <img src="mountains_front.png" alt="star" id="mountf">
+  </section>
+  <div class="sec" id="sec">
+      <h2 >ABOUT US</h2>
+      <p>     Businesses in todays era have a huge scope of profit if they start hosting it online. People do have 
+        prefer buying things, getting technical aids online but all of this is possible because of the online platforms 
+        that are capable of hosting websites. Though there are platforms that are providing opportunities to build 
+        a strong business online its impossible to have one without a good website or an application that can is a 
+        replica of your company on the internet. People will visit the website or application and if they find it 
+        appealing and interesting they will invest more amount of time on the web application that we might make. 
+        But, they do have alternatives to the applications or services we are providing due to the increase in the 
+        competition in the online world. So, to keep on acquiring new customers we need to have the best possible 
+        User Interface that keeps people engaged and also give them the best possible User Experience.
+        <br> 
+              UI Tech aims to help every keen learner be it a person who wants to start the designing career or 
+        any person who wants to design their own website or application for their business. We will provide them 
+        with the knowledge of how UI/UX is important and how a perfectly designed website can help them 
+        increase their customer base. Providing every learner with the blogs and videos about UI/UX, teaching 
+        them how to use applications like Figma to design, access to pre-made templates, application suggestions 
+        for designing, certificate at the end of the modules. So, any user can learn the importance, fundamentals 
+        of making a good UI along with providing the best User Experience, practicing and learning at the same 
+        time from our website. </p>
+        
+      <script>
+          let stars = document.getElementById('stars');
+          let moon = document.getElementById('moon');
+          let mountb = document.getElementById('mountb');
+          let text = document.getElementById('text');
+          let btn = document.getElementById('btn');
+          let mountf = document.getElementById('mountf');
+
+          window.addEventListener('scroll', function () {
+              let value = window.scrollY;
+              stars.style.left = value * 0.25 + 'px';
+              moon.style.top = value * 1.05 + 'px';
+              mountb.style.top = value * 0.5 + 'px';
+              mountf.style.top = value * 0 + 'px';
+              text.style.marginRight = value * 4 + 'px';
+          })
+      </script>
+
+  </div>
+</body>
+
+  

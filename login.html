@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="log.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  
+
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <script>
+    window.ga = window.ga || function() {
+      (ga.q = ga.q || []).push(arguments)
+    };
+    ga.l = +new Date;
+    ga('create', 'UA-105392568-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head>
+
+<body>
+  <header>
+		<a href="#" class="logo"><span>UI Tech</span></a>
+
+		<ul class="navbar">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Blog.html">Blogs</a></li>
+			<li><a href="#">Templates</a></li>
+			<li><a href="AboutUs.html">About</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+
+		<div class="main">
+			<a href="login.html" class="user "><i class="ri-user-fill"></i>Sign In</a>
+			<a href="register.html">Register</a>
+			<div class="bx bx-menu" id="menu-icon"></div>
+		</div>
+	</header>
+ 
+
+  <div class="theBall-outer">
+    <div class="theBall"></div>
+  </div>
+  <div id="page" class="site">
+    <canvas class="banner_canvas" id="canvas_banner"></canvas>
+
+    <div class="top-title wow fadeInUp" onmousemove="color_hover(event)">
+      <div class="row">
+        <div class="col-lg-6">
+          <h6>UItech</h6>
+          <h1>Learn<span class="line-Bottom">Explore</span></h1>
+        </div>
+        <div class="col-lg-6">
+          <p>create</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <center class="header"> Sign In</center>
+    <form action="#">
+      <div class="field email">
+        <div class="input-area">
+          <input type="text" placeholder="Username">
+          <i class="icon fas fa-envelope"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Email can't be blank</div>
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input type="password" placeholder="Password">
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Password can't be blank</div>
+      </div>
+      <input type="submit" value="Login">
+    </form>
+    <div class="sign-txt">Haven't Registered yet? <a href="index.html">Signup now</a></div>
+  </div>
+</body>
+
+  <script  src="log.js"></script>
+  <script>
+    const form = document.querySelector("form")
+eField = form.querySelector(".email"),
+eInput = eField.querySelector("input"),
+pField = form.querySelector(".password"),
+pInput = pField.querySelector("input");
+
+
+form.onsubmit = (e)=>{
+  e.preventDefault();
+  (eInput.value == "") ? eField.classList.add("shake", "error") : checkEmail();
+  (pInput.value == "") ? pField.classList.add("shake", "error") : checkPass();
+
+
+  setTimeout(()=>{ 
+    eField.classList.remove("shake");
+    pField.classList.remove("shake");
+  }, 500);
+
+
+  eInput.onkeyup = ()=>{checkEmail();}
+  pInput.onkeyup = ()=>{checkPass();} 
+
+
+  function checkEmail(){ 
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if(!eInput.value.match(pattern)){ 
+      eField.classList.add("error");
+      eField.classList.remove("valid");
+      let errorTxt = eField.querySelector(".error-txt");
+      (eInput.value != "") ? errorTxt.innerText = "Enter a valid email address" : errorTxt.innerText = "Email can't be blank";
+    }else{ 
+      eField.classList.remove("error");
+      eField.classList.add("valid");
+    }
+  }
+
+  function checkPass(){
+    if(pInput.value == ""){ 
+      pField.classList.add("error");
+      pField.classList.remove("valid");
+    }else{
+      pField.classList.remove("error");
+      pField.classList.add("valid");
+    }
+  }
+
+  if(!eField.classList.contains("error") && !pField.classList.contains("error")){
+    window.location.href = form.getAttribute("action"); 
+  }
+};
+  </script>
+
+</body>
+</html>
